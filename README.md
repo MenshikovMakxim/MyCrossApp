@@ -1,0 +1,2 @@
+# MyCrossApp
+Навчальний проект Cordova
