@@ -1,50 +1,275 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Спортклуб, який пропонує різноманітні види спорту та тренування.">
+    <meta name="keywords" content="спортклуб, тренування, фітнес, спортивні секції">
+    <meta name="author" content="Maxim">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Спортклуб ATITLAN">
+    <meta property="og:description" content="Приєднуйтесь до нашого спортклубу для покращення вашого здоров'я та фізичної форми.">
+    <meta property="og:image" content="https://atitlanclub.com/logo.png">
+    <meta property="og:url" content="https://atitlanclub.com">
+    <title>ATITLAN</title>
 
-    http://www.apache.org/licenses/LICENSE-2.0
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/script.js" defer></script>
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+</head>
+<body>
+    <div id="changeButton" class="menu-panel">
+        <h2 id="option">Change Color</h2>
+        <div id="changeStyle">
+            <button>h1</button>
+            <button>h2</button>
+            <button>h3</button>
+            <button>h4</button>
+            <button>p</button>
+            <button>ul</button>
+            <button>li</button>
+            <button>a</button>
+            <button>button</button>
+            <button>figcaption</button>
+            <button>div</button>
+            <button>section</button>
+            <button>article</button>
+            <button>header</button>
+            <button>footer</button>
+            <button>aside</button>
+            <button>nav</button>
+            <button>main</button>
         </div>
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
-    </body>
+        <label class="unlock">
+            <h4>Random(LM)/Your chose(RM)</h4>
+            <select id="options">
+                <option value="TextColor">Колір тексту</option>
+                <option value="SizeText">Розмір тексту</option>
+                <option value="SizeElement">Розмір елементу</option>
+                <option value="BackgroundColor">Колір фону</option>
+            </select>
+            <h4>Color<input type="color" id="color" value="#000000"></h4>
+            <h4>Font<input type="range" id="font" min="0" max="52" value="0" step="2"><span id="F"></span></h4>
+            <label class="resize">
+                <h4>Width<input type="range" id="width" min="0" max="100" value="0" step="2"><span id="W"></span></h4>
+                <h4>Height<input type="range" id="height" min="0" max="100" value="0" step="2"><span id="H"></span></h4>
+            </label>
+        </label>
+    </div>
+    <header>
+        <section class="head">
+            <h4>⚡ Інстинкт бути у формі</h4>
+            <div>
+                <p><a href="#"><i class="fas fa-phone-alt"></i>Телефон: +380 50 123 45 67</a></p>
+                <p><i class="fas fa-globe-americas"></i>Кіровоград</p>
+                <p><button id="change">menu for change</button></p>
+            </div>
+        </section>
+            <nav>
+                <figure>
+                    <img src="img/logo.png" alt="logo">
+                </figure>
+                    <input id="burger-tap" type="checkbox">
+                    <label for="burger-tap">
+                        <span></span>
+                    </label>
+                <nav class="menu">
+                    <a href="index.html">Головна</a>
+                    <a href="#">Про нас</a>
+                    <a href="#">Тренування</a>
+                    <a href="#">Контакти</a>
+                    <a href="#">Ціни</a>
+                    <a class="avatar" href="login.html"><img src="img/login.png" alt="login">SIGN IN</a>
+                </nav>
+            </nav>
+            <section class="main-text">
+                <h1>ATITLAN</h1>
+                <h4>Живи, щоб тренуватися!</h4>
+                <div>
+                    <button class="start">Почати тренування</button>
+                    <button class="list">Розклад</button>
+                </div>
+            </section>
+    </header>
+    <main>
+        <div class="about">
+            <article>
+                <h2>Місія клубу</h2>
+                <p>Наш спортклуб створений для тих, хто прагне вести здоровий спосіб життя, покращувати фізичну форму та знайомитися з однодумцями.
+                    Ми віримо, що спорт — це не лише про фізичні досягнення, а й про командний дух та підтримку один одного.</p>
+            </article>
+            <article>
+                <h2>Чому варто приєднатися?</h2>
+                <p>Покращення фізичної форми: Регулярні тренування допоможуть досягти ваших цілей.
+                    Спільнота однодумців: Знайомство та спілкування з людьми, які поділяють ваші інтереси.
+                    Мотивація: Підтримка тренерів та інших учасників надихне вас не зупинятися на досягнутому.</p>
+            </article>
+            <article>
+                <h2>Як приєднатися?</h2>
+                <p>Запишіться на пробне заняття: Приходьте до нас на безкоштовне пробне тренування.
+                    Зареєструйтесь: Заповніть форму на нашому сайті або зверніться до адміністрації клубу</p>
+            </article>
+        </div>
+        <section class="service">
+            <h2>Наші тренування</h2>
+            <h3>Для кожного!</h3>
+            <div class="container-card">
+                <figure class="card">
+                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    <img src="img/ganteli_sportzal.jpg" alt="...">
+                    <figcaption>Спортзал</figcaption>
+                </figure>
+                <figure class="card">
+                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    <img src="img/shtangi_sportzal_bodibilding.jpg" alt="...">
+                    <figcaption>Бодібілдинг</figcaption>
+                </figure>
+                <figure class="card">
+                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    <img src="img/devushka_ganteli_fitnes.jpg" alt="...">
+                    <figcaption>Фітнес</figcaption>
+                </figure>
+                <figure class="card">
+                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    <img src="img/ruki_muzhchiny_borba.jpg" alt="...">
+                    <figcaption>Армреслинг</figcaption>
+                </figure>
+                <figure class="card">
+                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    <img src="img/shtanga_grif.jpg" alt="...">
+                    <figcaption>Паверліфтинг</figcaption>
+                </figure>
+                <figure class="card">
+                    <a href="#"><i class="fas fa-arrow-right"></i></a>
+                    <img src="img/bokserskie_perchatki_perchatki_boks.jpg" alt="...">
+                    <figcaption>Бокс</figcaption>
+                </figure>
+            </div>
+            <div class="lenta">
+                <h4>ATITLAN</h4>
+            </div>
+        </section>
+        <section>
+            <h2>Наші Тренери</h2>
+            <div class="container-card">
+                <figure class="card-person">
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                    <img src="img/person%20trainer.png" alt="...">
+                    <figcaption>Персональний тренер</figcaption>
+                </figure>
+                <figure class="card-person">
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                    <img src="img/bodybuilding%20trainer.png" alt="...">
+                    <figcaption>Тренер бодібілдингу</figcaption>
+                </figure>
+                <figure class="card-person">
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                    <img src="img/fitness%20trainer.png" alt="...">
+                    <figcaption>Фітнес тренер</figcaption>
+                </figure>
+                <figure class="card-person">
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                    <img src="img/Armwrestling%20trainer.png" alt="...">
+                    <figcaption>Тренер армреслингу</figcaption>
+                </figure>
+                <figure class="card-person">
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                    <img src="img/powerlifting%20trainer.png" alt="...">
+                    <figcaption>Тренер паверліфтингу</figcaption>
+                </figure>
+                <figure class="card-person">
+                    <a href="#"><i class="fas fa-phone-alt"></i></a>
+                    <img src="img/Boxing%20trainer.png" alt="...">
+                    <figcaption>Тренер боксу</figcaption>
+                </figure>
+            </div>
+        </section>
+</main>
+<footer>
+    <p><i class="fa fa-copyright"></i>Copyright 2024 ATITLAN</p>
+    <aside>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+    </aside>
+    <p>💪atitlan.com.ua</p>
+</footer>
+    <!--
+<footer>
+     <table class="box">
+        <thead>
+            <tr>
+                <h3>Таблиця з інформацією</h3>
+            </tr>
+            <tr>
+                <th>Тег</th>
+                <th>Пояснення</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>h1</td>
+                <td>Заголовок першого рівня</td>
+            </tr>
+            <tr>
+                <td>h3</td>
+                <td>Заголовок третього рівня</td>
+            </tr>
+            <tr>
+                <td>ul</td>
+                <td>Ненумерований список</td>
+            </tr>
+            <tr>
+                <td>li</td>
+                <td>Елемент списку</td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>Гіперпосилання</td>
+            </tr>
+            <tr>
+                <td>img</td>
+                <td>Зображення</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>Параграф</td>
+            </tr>
+            <tr>
+                <td>table</td>
+                <td>Таблиця</td>
+            </tr>
+            <tr>
+                <td>thead</td>
+                <td>Верхня частина таблиці</td>
+            </tr>
+            <tr>
+                <td>tbody</td>
+                <td>Основна частина таблиці</td>
+            </tr>
+            <tr>
+                <td>tfoot</td>
+                <td>Нижня частина таблиці</td>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>Рядок таблиці</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>Заголовок комірки таблиці</td>
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>td</td>
+                    <td>Комірка таблиці</td>
+                </tr>
+            </tfoot>
+    </table>
+</footer>
+-->
+</body>
 </html>
